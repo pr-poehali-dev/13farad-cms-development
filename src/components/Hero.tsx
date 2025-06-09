@@ -1,14 +1,6 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
 
 const Hero = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
       <div className="container mx-auto px-4">
@@ -21,21 +13,18 @@ const Hero = () => {
             административных зданий, образовательных и медицинских учреждений
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100"
-              onClick={() => scrollToSection("services")}
+            <a
+              href="/services"
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Наши услуги
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-600"
-              onClick={() => scrollToSection("contacts")}
+            </a>
+            <a
+              href="/contacts"
+              className="border-white text-white hover:bg-white hover:text-blue-600 border px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Связаться с нами
-            </Button>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
